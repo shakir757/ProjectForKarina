@@ -29,4 +29,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Сделал кнопку по ширине всего экрана и сделал отступы по Horizontal -->
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Нажми, чтобы увидеть Toast"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_change_text" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
