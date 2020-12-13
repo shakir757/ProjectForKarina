@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,11 +20,26 @@ public class MainActivity extends AppCompatActivity {
         Button buttonToast = findViewById(R.id.button_toast);
         final TextView textView = findViewById(R.id.textView);
 
-
         buttonChangeText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textView.setText("Hi!");
+            }
+        });
+
+        final ImageView imageView = findViewById(R.id.imageView);
+        final boolean[] a = {true};
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (a[0]){
+                    imageView.setImageResource(R.drawable.second);
+                    a[0] = false;
+                } else {
+                    imageView.setImageResource(R.drawable.first);
+                    a[0] = true;
+                }
             }
         });
 
